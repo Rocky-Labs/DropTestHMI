@@ -1,0 +1,79 @@
+<html lang="en-us">
+<head>
+    <meta char  ="utf-8">
+    <meta hhtp-equiv = "X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <meta name ="viewport" content ="width=device-width, initial-scale=1">
+    <link type= "text/css"  href="static/css/style.css" rel="stylesheet"/>
+
+    <title>Machine Motion</title>
+    
+    
+</head>
+
+
+<body>
+    
+    <div class="row" id="rowg">
+        
+        <div class="column1">
+            <button class ="drop_btn"> Drop </button>  
+            <button class ="close_btn"> Close </button> 
+                  
+        </div>
+        
+        <div class="column2">
+            <h2>Height (mm)</h2>    
+                
+             
+            <button class ="default_btn"> Default </button>  
+            <button class ="arrow_up"> <img src="static/img/up_btn.png" alt="button" title="button"/></button> 
+
+            <div class= "range-slider">
+                <input id = "slide" class= "range-slider__range"  type="range" value="200"  min="0" max="14035">
+                <span id = "value1" class ="range-slider__value">0</span>
+                </div>
+                
+
+            <button class ="arrow_Down"> <img src="static/img/dw_btn.png" alt="button" title="button"/>
+            </button>  
+        </div>
+       
+        
+    <div class="column3">
+        <h2 >Number of Tests</h2>
+        <h1 id="dateTime"></h1>
+        <ul>   
+        </ul>    
+
+        <div id="newItemButton">
+            <button id="showForm">new item</button>
+        </div>
+        <form id="newItemForm" method="POST">
+        <input type="number" id="itemDescription" placeholder="Add SAP #" inputmode="numeric" />
+        <input type="text" id="EmployeeName" placeholder="Employee Name" />
+        <!-- successful / Failure button-->
+        <div class="toggle-radio">
+            <input type="radio" name="rdo" class = "rdo" id="yes" value="Succesful" checked>
+            <input type="radio" name="rdo" class = "rdo" id="no" value="Failure">
+            <div class="switch">
+              <label for="yes">Succesful</label>
+              <label for="no">Failure</label>
+              <span></span>
+            </div>
+          </div>
+        <input type="submit" id="add" value="add"/>
+        
+        
+        
+    </form>
+    <div class = "alert_Tests" role ="alert" id ="errorAlert"></div>
+        
+    </div>
+    <script type= "text/javascript" src="static/js/jquery.js"></script>  
+    <script type= "text/javascript" src="static/js/rangeSlider.js"></script>
+    <script type= "text/javascript" src="static/js/form.js"></script>
+    <script type= "text/javascript" src="static/js/DropBag.js"></script>
+    
+</body>
+</html>
